@@ -14,6 +14,7 @@ use anyhow::Result;
 use asyncgit::{sync, StatusItem, StatusItemType, CWD};
 use crossterm::event::Event;
 use std::path::Path;
+use std::process::Command;
 use strings::commands;
 use tui::{backend::Backend, layout::Rect, Frame};
 
@@ -203,6 +204,14 @@ impl Component for ChangesComponent {
                                 ),
                             );
                         }
+                        Ok(true)
+                    }
+                    keys::PUSH => {
+                        Command::new("sh")
+                            .arg("-c")
+                            .arg("git push")
+                            .output()
+                            .unwrap();
                         Ok(true)
                     }
                     keys::STATUS_RESET_FILE

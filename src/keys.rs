@@ -26,6 +26,7 @@ pub const EXIT_POPUP: KeyEvent = no_mod(KeyCode::Esc);
 pub const CLOSE_MSG: KeyEvent = no_mod(KeyCode::Enter);
 pub const OPEN_COMMIT: KeyEvent = no_mod(KeyCode::Char('c'));
 pub const OPEN_HELP: KeyEvent = no_mod(KeyCode::Char('h'));
+pub const PUSH: KeyEvent = no_mod(KeyCode::Char('p'));
 pub const MOVE_LEFT: KeyEvent = no_mod(KeyCode::Left);
 pub const MOVE_RIGHT: KeyEvent = no_mod(KeyCode::Right);
 pub const HOME: KeyEvent = no_mod(KeyCode::Home);
